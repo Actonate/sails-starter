@@ -59,14 +59,17 @@ module.exports = {
           res.send({code: 'SUCCESS'});
         } else {
           log.info('Failed to find User');
+          res.status(400);
           res.send({code: 'FAILED'});
         }
       } else {
+        res.status(400);
         log.info('result array empty');
         res.send({code: 'FAILED'});
       }
     }).catch(function() {
       log.error('User not exist');
+      res.status(400);
       res.send({error: 'NOTFOUND'});
     });
   },
