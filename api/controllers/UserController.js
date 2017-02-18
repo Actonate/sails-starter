@@ -58,7 +58,6 @@ module.exports = {
           res.status(200);
           res.send({code: 'SUCCESS'});
         } else {
-          res.status(400);
           log.info('Failed to find User');
           res.status(400);
           res.send({code: 'FAILED'});
@@ -69,7 +68,6 @@ module.exports = {
         res.send({code: 'FAILED'});
       }
     }).catch(function() {
-      res.status(400);
       log.error('User not exist');
       res.status(400);
       res.send({error: 'NOTFOUND'});
