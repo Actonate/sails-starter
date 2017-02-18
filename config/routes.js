@@ -35,11 +35,12 @@ module.exports.routes = {
   '/': {
     view: 'create'
   },
-
-  'GET /user/session' : 'UserController.session', 
+ 'GET /user/session' : 'UserController.session', 
   'POST /user/login' : 'UserController.login',
   'GET /user/logout' : 'UserController.logout',
-  'POST /user/createuser' : 'UserController.createUser'
+  'POST /user/createuser' : 'UserController.createUser',
+  'POST /make/create': 'MakeController.add',
+  'POST /make/get': 'MakeController.get',
 
   /***************************************************************************
   *                                                                          *
